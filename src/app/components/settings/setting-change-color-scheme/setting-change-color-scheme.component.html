@@ -1,0 +1,15 @@
+<mat-nav-list>
+    <h3 matSubheader>Preferred Color Scheme</h3>
+
+    <h2>Toggle Button</h2>
+    <mat-list-item>
+        <mat-slide-toggle [(ngModel)]="checked" (change)="toggleTheme()">Dark Mode</mat-slide-toggle>
+    </mat-list-item>
+
+    <h2>Select Item</h2>
+    <mat-list-item *ngFor="let theme of themes" (click)="setTheme(theme.name)">
+        <mat-icon mat-list-icon>{{ theme.icon }}</mat-icon>
+        <h3 matLine>{{ theme.name }}</h3>
+        <mat-icon *ngIf="colorSchemeService.currentActive() === theme.name">check</mat-icon>        
+    </mat-list-item>
+</mat-nav-list>

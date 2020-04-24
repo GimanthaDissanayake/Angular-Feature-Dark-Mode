@@ -1,0 +1,40 @@
+<mat-sidenav-container>
+
+	<mat-sidenav #sideNav mode="push" position="end">
+		<mat-toolbar color="primary">
+			<h1>Settings</h1>
+			<div style="flex: 1 1 auto;"></div>
+			<button mat-icon-button (click)="sideNav.toggle()">
+                <mat-icon>close</mat-icon>
+            </button>
+		</mat-toolbar>
+		<app-setting-change-color-scheme></app-setting-change-color-scheme>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+
+		<mat-toolbar color="primary">
+			<h1>Preferred Color Scheme</h1>
+			<div style="flex: 1 1 auto;"></div>
+			<button mat-icon-button (click)="sideNav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+		</mat-toolbar>
+
+		<a class="card-wrapper" href="#">
+
+			<p>Read the Article to this StackBlitz on Medium</p>
+
+			<mat-card>
+				<img mat-card-image src="https://miro.medium.com/max/2560/1*CP1MdoQD7ZKi8gANjt-lCg.png" alt="Photo of a Shiba Inu">
+				<mat-card-content>
+					<h2>How to implement dark / light mode in Angular Material with prefers-color-scheme</h2>
+					<p>The dark mode brings many advantages and shouldn't be missed in any modern web application. Let me show you an example for Angular Material</p>
+				</mat-card-content>
+			</mat-card>
+
+		</a>
+
+	</mat-sidenav-content>
+
+</mat-sidenav-container>
